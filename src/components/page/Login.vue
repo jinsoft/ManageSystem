@@ -37,8 +37,7 @@ export default {
     },
     methods:{
         submitForm(formName) {
-            this.$refs[formName].validate((valid) => {
-                console.log(valid);
+            this.$refs[formName].validate((valid) => { //element-ui 表单验证 
                 if (valid) {
                     localStorage.setItem('username',this.ruleForm.username);
                     this.$router.push('/');
